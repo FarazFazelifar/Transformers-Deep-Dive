@@ -4,6 +4,12 @@ The encoder block is the fundamental repeating unit of a transformer encoder. It
 
 ## Architecture
 
+<div style="text-align: center;">
+    <img src="../images/Encoder.png" alt="Architecure of an encoder block as defined by *Attention is all you need*">
+    <figcaption>Architecure of an encoder block as defined by Attention is all you need</figcaption>
+</div>
+| Architecure of an encoder block as defined by *Attention is all you need*
+
 An encoder block typically follows this pattern:
 
 1. **Layer Normalization** — normalize input
