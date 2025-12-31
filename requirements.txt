@@ -2,7 +2,9 @@ torch
 numpy
 jupyter
 matplotlib
+seaborn
 scikit-learn
 pandas
 transformers
+sentence-transformers
 datasets
