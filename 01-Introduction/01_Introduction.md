@@ -14,6 +14,9 @@ The lifecycle of an LLM typically involves four key stages, moving from massive 
 > [!IMPORTANT]
 > **Data Quality**: The quality of the pre-training corpus is the primary determinant of model capability. No architectural improvements can fully compensate for poor data.
 
+![The Transformer Architecture: Encoder and Decoder stacks.](../images/transformer_architecture.png)
+*Figure 1: High-level overview of the Transformer architecture, showing the interaction between the Encoder and Decoder through Multi-Head Attention.*
+
 ## 2. Mathematical Foundations
 
 A deep understanding of Transformers requires intuition in Linear Algebra and Probability.

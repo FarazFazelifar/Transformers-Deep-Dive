@@ -61,6 +61,9 @@ $$ PE_{(pos, 2i+1)} = \cos\left(\frac{pos}{10000^{2i/d_{model}}}\right) $$
 
 Modern Transformers have evolved beyond the original 2017 paper.
 
+![Rotary Positional Embeddings (RoPE): Visualizing vector rotation in the 2D complex plane.](../images/rope_visualization.png)
+*Figure 2: Representation of Rotary Positional Embeddings. Each token vector is rotated by an angle determined by its position, naturally encoding relative distance.*
+
 ### Rotary Positional Embeddings (RoPE)
 Used in **Llama 2, Mistral, and PaLM**.
 Instead of adding a vector to the embedding ($x + p$), RoPE **rotates** the vector in the complex plane.

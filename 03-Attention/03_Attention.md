@@ -6,6 +6,9 @@ We have processed our tokens and injected positional information. Now, we implem
 
 The fundamental operation of the Transformer is **Scaled Dot-Product Attention**. It can be viewed as a "soft" version of a dictionary lookup, where a query is matched against a set of keys to retrieve weighted values.
 
+![Scaled Dot-Product Attention: The flow from Q, K, V matrices to the final attention output.](../images/attention_mechanism.png)
+*Figure 3: Detailed flow of the Scaled Dot-Product Attention mechanism, including the scaling factor and softmax normalization.*
+
 ### 1.1 Mathematical Formulation
 
 Given Query ($Q$), Key ($K$), and Value ($V$) matrices, the attention output is calculated as:

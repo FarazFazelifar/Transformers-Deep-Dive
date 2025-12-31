@@ -1,102 +1,38 @@
-# Transformers-Deep-Dive
+# 🌌 Transformers Deep Dive
 
-## Phase 1: The Building Blocks
-
-**[01. Introduction & Prerequisites](./01-Introduction)**
-
-Establish the necessary mathematical and conceptual foundations before diving into the architecture.
-* Glossary & Notation
-* Math Refreshers (Linear Algebra, Probability)
-
-**[02. Input Processing](./02-Input_Processing)**
-
-Transform raw text into processed vectors that the model can interpret.
-* Tokenization (BPE, WordPiece)
-* Embeddings
-* Positional Encodings (Sinusoidal, RoPE, ALiBi)
-
-**[03. Attention](./03-Attention)**
-
-The mechanism that allows the model to weigh the importance of different words in relation to each other.
-* Scaled Dot-Product Attention
-* Self-Attention
-* Multi-Headed Attention
-* Masked Attention
-* Cross-Attention
-
-**[04. FFN & Norms](./04-FFN_and_Norms)**
-
-Feed-forward and normalization layers that process information after attention is applied.
-* Feed Forward Networks
-* Activation Functions (ReLU, GeLU, SwiGLU)
-* Normalization (LayerNorm, RMSNorm)
-* Residual Connections
+This repository is a  deep dive into the Transformer architecture. Each section is built from the ground up with a focus on the mathematics behind transformers and newer approaches in the field.
 
 ---
 
-## Phase 2: The Architecture
+## 🛠 Project Principles
 
-**[05. The Encoder Block](./05-Encoder_Block)**
-Bi-directional component designed to build deep understanding of context.
-* Self-Attention + FFN Structure
-* Bi-directional Context
+- **Math-First**: We start with the LaTeX formulation before touching a single line of code.
+- **From Scratch**: Logic is implemented in pure PyTorch/NumPy without high-level library abstractions.
+---
 
-**[06. The Decoder Block](./06-Decoder_Block)**
-Uni-directional component optimized for generating sequences one token at a time.
-* Masked Self-Attention + FFN Structure
-* Causal / Auto-regressive Generation
+## 🗺 Roadmap
 
-**[07. The Full Transformer](./07-Full_Transformer)**
-Combine encoder and decoder stacks to recreate the original architecture proposed in 2017.
-* Encoder-Decoder Connection
-* Sequence-to-Sequence Data Flow
+### Phase 1: The Building Blocks
+- **[01. Introduction & Prerequisites](01-Introduction/01_Introduction.md)**: Math foundations and project glossary.
+- **[02. Input Processing](02-Input_Processing/02_Input_Processing.md)**: Tokenization (BPE, WordPiece) and Positional Encodings (RoPE).
+- **[03. Attention Mechanisms](03-Attention/03_Attention.md)**: Scaled Dot-Product, Multi-Head, and Causal Masking.
+- **[04. FFN & Normalization](04-FFN_and_Norms/04_FFN_and_Norms.md)**: Feed-Forward Networks, LayerNorm, RMSNorm, and SwiGLU.
+
+### Phase 2: The Architecture
+- **[05. The Encoder Block](05-Encoder_Block)**: Bi-directional context and structure.
+- **[06. The Decoder Block](06-Decoder_Block)**: Auto-regressive generation and causal flow.
+- **[07. The Full Transformer](07-Full_Transformer)**: Recreating the "Attention Is All You Need" paper.
+
+### Phase 3: The Family Tree
+- **[08. Encoder-Only Models](08-Encoder_Only_Models)**: Understanding BERT and classification.
+- **[09. Decoder-Only Models](09-Decoder_Only_Models)**: Exploring GPT, Llama, and modern LLMs.
+- **[10. Encoder-Decoder Models](10-Encoder_Decoder_Models)**: T5, Whisper, and hybrid systems.
 
 ---
 
-## Phase 3: The Family Tree
+## 📚 Sources & References
 
-**[08. Encoder-Only Models](./08-Encoder_Only_Models)**
-Architectures like BERT that specialize in understanding and classification tasks.
-* Masked Language Modeling
-* Downstream Tasks (NER, Sentiment)
-
-**[09. Decoder-Only Models](./09-Decoder_Only_Models)**
-Architectures like GPT and Llama that dominate modern text generation and reasoning.
-* Causal Language Modeling
-* Zero-shot & Few-shot capabilities
-
-**[10. Encoder-Decoder Models](./10-Encoder_Decoder_Models)**
-Hybrid architectures ideal for sequence-to-sequence tasks like translation.
-* T5 & Whisper
-* Translation & Summarization
+- **Understanding LLMs Survey**: [arXiv:2401.02038](https://arxiv.org/pdf/2401.02038v2)
+- **Machine Learning Mastery**: [High-quality implementation tutorials.](https://machinelearningmastery.com)
 
 ---
-
-## Phase 4: Life Cycle of a Model
-
-**[11. Training Dynamics](./11-Training_Dynamics)**
-Optimization processes, loss functions, and schedules used to teach the model.
-* Cross Entropy Loss
-* Optimizers (AdamW)
-* Learning Rate Schedulers (Warmup, Cosine Decay)
-
-**[12. Inference Mechanics](./12-Inference_Mechanics)**
-How trained models generate output efficiently using techniques like KV caching.
-* The Generation Bottleneck
-* KV Caching
-* Sampling Strategies (Temperature, Top-k, Nucleus)
-
----
-
-## Phase 5: Modern Frontier
-
-**[13. Modern Optimizations](./13-Modern_Optimizations)**
-Current techniques for making models faster, smaller, and easier to fine-tune.
-* PEFT & LoRA
-* Quantization (FP16, INT8)
-* Flash Attention
-
-**[14. Vision Transformers (ViT)](./14-Vision_Transformers)**
-Extending the Transformer architecture beyond text to process visual data.
-* Image Patching
-* Multimodal Integration
