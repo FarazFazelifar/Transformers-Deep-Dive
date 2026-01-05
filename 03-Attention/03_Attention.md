@@ -76,27 +76,6 @@ Introduced by Mistral, SWA limits the attention range for each token to a fixed 
 
 ---
 
-## 4. Visualizing Masked Attention
-
-Applying the causal/look-ahead mask to the attention scores ensures that each token can only attend to previous tokens and itself. This is critical for autoregressive generation in Decoders.
-
-```python
-# Applying the Causal Mask
-mask = create_look_ahead_mask(len(tokens))
-output_masked, weights_masked = scaled_dot_product_attention(qkv, qkv, qkv, mask=mask)
-
-# Original vs Masked Attention
-fig, axes = plt.subplots(1, 2, figsize=(16, 7))
-axes[0].imshow(weights_matrix, cmap='viridis')
-axes[0].set_title("Unmasked Attention")
-# ... (see notebook for full visualization code)
-axes[1].imshow(weights_masked[0, 0].cpu().numpy(), cmap='viridis')
-axes[1].set_title("Masked Attention (Causal)")
-plt.show()
-```
-
----
-
 ## References
 
 *   **[Attention Is All You Need (Vaswani et al., 2017)](https://arxiv.org/abs/1706.03762)**
