@@ -2,6 +2,8 @@
 
 This repository is a  deep dive into the Transformer architecture. Each section is built from the ground up with a focus on the mathematics behind transformers and newer approaches in the field.
 
+**Status:** This is an ongoing independent study. The roadmap describes topics I intend to cover; the presence of a directory does not necessarily mean that its explanations or implementations are complete.
+
 ---
 
 ## 🛠 Project Principles
